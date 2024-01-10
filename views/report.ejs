@@ -1,0 +1,36 @@
+<!-- views/report.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report</title>
+</head>
+<body>
+  <h1>Report</h1>
+
+  <h2>Patients</h2>
+  <ul>
+    <% patients.forEach(patient => { %>
+      <li><%= patient.firstName %></li>
+      <!-- Add other patient fields as needed -->
+    <% }); %>
+  </ul>
+
+  <h2>Doctors</h2>
+  <ul>
+    <% doctors.forEach(doctor => { %>
+      <li><%= doctor.firstName %></li>
+      <!-- Add other doctor fields as needed -->
+    <% }); %>
+  </ul>
+
+  <h2>Appointments</h2>
+  <ul>
+    <% appointments.forEach(appointment => { %>
+      <li><%= appointment.appointmentDate %></li>
+      <!-- Add other appointment fields as needed -->
+    <% }); %>
+  </ul>
+</body>
+</html>
